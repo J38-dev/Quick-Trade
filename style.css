@@ -175,3 +175,15 @@ body {
   color: white;
   margin-top: 20px;
 }
+
+i {
+  margin-right: 6px;
+}
+
+button {
+  padding: 10px 15px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
