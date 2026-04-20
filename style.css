@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Public Sans:wght@300;400;500;600;700&display=swap');
+
 /* BODY */
 body {
   background: #0BA045;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   margin: 0;
 }
 
@@ -17,11 +19,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background: #25D366;
+
+  height: 60px; /* FIXED HEIGHT */
+  padding: 0 15px;
+
+  background: #0BA045;
   color: white;
+
   position: sticky;
   top: 0;
+  z-index: 10;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* depth */
 }
 
 .logo {
@@ -56,20 +65,46 @@ body {
   max-width: 400px;
 }
 
-/* CATEGORIES */
 .categories {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   overflow-x: auto;
-  margin-bottom: 15px;
+
+  padding: 10px;
+
+  position: sticky;
+  top: 60px;
+  z-index: 15;
+
+  background: #0BA045;
+
+  scroll-snap-type: x mandatory;
 }
 
 .categories button {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+
+  white-space: nowrap;
+
+  padding: 8px 14px;
+
   border-radius: 20px;
   border: none;
-  padding: 8px 15px;
-  background: white;
-  color: #0BA045;
+
+  background: rgba(255,255,255,0.15);
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+
+  backdrop-filter: blur(5px);
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
 }
 
 /* GRID */
@@ -109,7 +144,7 @@ body {
 /* IMAGE */
 .card img {
   width: 100%;
-  height: 160px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -186,4 +221,198 @@ button {
   border: none;
   cursor: pointer;
   font-weight: bold;
+}
+
+
+
+.categories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+
+  padding: 10px;
+
+  position: sticky;
+  top: 60px;
+  z-index: 15;
+
+  background: #0BA045;
+
+  scroll-snap-type: x mandatory;
+}
+
+.categories button {
+  flex-shrink: 0;
+  white-space: nowrap;
+  scroll-snap-align: start;
+
+  border-radius: 20px;
+  border: none;
+
+  padding: 8px 15px;
+
+  background: white;
+  color: #0BA045;
+
+  font-weight: bold;
+}
+/* CARD BUTTON HOVER */
+.info button:hover {
+  background: #1ebe5d;
+}
+
+/* STRONGER CARD LOOK */
+.card {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* MAKE BUTTON BIGGER ON MOBILE */
+@media (max-width: 600px) {
+  .info button {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* HERO IMPROVEMENT */
+.hero h2 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* SEARCH BAR IMPROVED */
+.hero input {
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* FREE BOX STRONGER */
+.free {
+  border: 2px solid #25D366;
+}
+
+/* CLICK FEEDBACK */
+button:active {
+  transform: scale(0.97);
+}
+
+/* VERIFIED BADGE */
+.verified {
+  font-size: 10px;
+  background: #25D366;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+/* URGENCY TEXT */
+.urgency {
+  font-size: 20px;
+  color: red;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* HOT DEAL STYLE */
+.urgency.hot {
+  color: orange;
+}
+
+/* IMPROVE TITLE ALIGNMENT */
+.info h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+/* BUTTON STRONGER */
+.info button {
+  font-size: 14px;
+}
+
+/* IMAGE WRAP */
+.img-wrap {
+  position: relative;
+}
+
+/* LOCATION BADGE */
+.location {
+  position: absolute;
+  top: 10px;
+  right: 10px; /* FIXED */
+
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 11px;
+
+  padding: 5px 10px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(4px);
+}
+
+/* OPTIONAL: slight image polish */
+.img-wrap img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.categories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.categories button {
+  scroll-snap-align: start;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.section-title {
+  color: white;
+  font-size: 16px;
+  margin: 10px 0;
+  
+}
+
+/* LOGO WRAP */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* LOGO IMAGE */
+.logo-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* LOGO TEXT */
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .logo-text {
+    font-size: 16px;
+  }
 }
