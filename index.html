@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QuickTrade</title>
+<title>Ennerdale Marketing</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -12,98 +12,202 @@
 
 <!-- TOP BAR -->
 <header class="topbar">
-  <h2 class="logo">QuickTrade</h2>
+ <div class="logo-wrap">
+  <img class="logo-img" src="https://images.unsplash.com/photo-1611746872915-64382b5c76da" alt="logo">
+  <span class="logo-text">Ennerdale Marketing</span>
+</div>
 
-  <div class="icons">
-    <i class="fa-solid fa-tags"></i>
-    <i class="fa-regular fa-user"></i>
-    <i class="fa-solid fa-ellipsis-vertical"></i>
-  </div>
+
 </header>
 
 <main class="container">
 
   <!-- HERO -->
   <section class="hero">
-    <h2>Buy & Sell Instantly</h2>
-    <input type="text" placeholder="Search products...">
+    <h2>Buy & Sell<br>  Locally In Ennerdale</h2>
+    <div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search phones, food, cars, services...">
+</div>
   </section>
+  
+  
+  
 
   <!-- CATEGORIES -->
   <section class="categories">
     <button>All</button>
-    <button>Phones</button>
+    <button>Food</button>
     <button>Fashion</button>
-    <button>Cars</button>
+    <button>Phones</button>
+    <button>Services</button>
   </section>
+  
+  <h3 class="section-title">Latest in Ennerdale</h3>
 
   <!-- PRODUCTS -->
   <section class="products">
     <div class="grid">
-
-      <!-- FEATURE BOX -->
-      <div class="free">
-        <h2>Free local items</h2>
-        <p>One place for all your local needs</p>
-        <button>Browse Items</button>
-      </div>
+      
 
       <!-- CARD 1 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
-        <div class="info">
-          <h3>MacBook Pro</h3>
-          <p class="price">R22,000</p>
-          <p class="meta">📍 Harrismith • ⭐⭐⭐⭐☆</p>
-          <button>View</button>
-        </div>
-      </div>
+<div class="card" data-category="phones" data-name="macbook pro">
+  
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+    <span class="location">Ennerdale</span>
+  </div>
+
+  <div class="info">
+    <h3>
+      MacBook Pro 
+      <span class="verified">✔ Verified</span>
+    </h3>
+
+    <p class="price">R22,000</p>
+
+    <p class="urgency">Only 2 left</p>
+
+    <button onclick="orderWhatsApp('MacBook Pro','R22,000')">
+     Order on Whatsapp
+    </button>
+  </div>
+</div>
 
       <!-- CARD 2 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
-        <div class="info">
-          <h3>iPhone 13</h3>
-          <p class="price">R14,500</p>
-          <p class="meta">📍 Bethlehem • ⭐⭐⭐⭐☆</p>
-          <button>View</button>
-        </div>
-      </div>
 
       <!-- CARD 3 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1526178613658-3f1622045557">
-        <div class="info">
-          <h3>Canon Camera</h3>
-          <p class="price">R8,200</p>
-          <p class="meta">📍 Phuthaditjhaba • ⭐⭐⭐⭐☆</p>
-          <button>View</button>
-        </div>
-      </div>
+    
 
       <!-- CARD 4 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1503602642458-232111445657">
-        <div class="info">
-          <h3>Office Desk</h3>
-          <p class="price">R1,200</p>
-          <p class="meta">📍 Harrismith • ⭐⭐⭐⭐☆</p>
-          <button>View</button>
-        </div>
-      </div>
+      <div class="card" data-category="phones" data-name="iphone 13">
+  
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+    <span class="location">Ennerdale</span>
+  </div>
+
+  <div class="info">
+    <h3>
+      iPhone 13 
+      <span class="verified">✔ Verified</span>
+    </h3>
+
+    <p class="price">R14,500</p>
+
+    <p class="urgency hot">Hot deal</p>
+
+    <button onclick="orderWhatsApp('iPhone 13','R14,500')">
+      Order on Whatsapp
+    </button>
+  </div>
+
+</div>
 
       <!-- CARD 5 -->
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1521336575822-6da63fb45455">
-        <div class="info">
-          <h3>Nike Sneakers</h3>
-          <p class="price">R1,800</p>
-          <p class="meta">📍 Durban • ⭐⭐⭐⭐☆</p>
-          <button>View</button>
-        </div>
-      </div>
+      <div class="card" data-category="fashion" data-name="nike sneakers">
+  
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1521336575822-6da63fb45455">
+    <span class="location">Ennerdale</span>
+  </div>
 
+  <div class="info">
+    <h3>
+      Nike Sneakers 
+      <span class="verified">✔ Verified</span>
+    </h3>
 
+    <p class="price">R1,800</p>
+
+    <p class="urgency hot">Selling fast</p>
+
+    <button onclick="orderWhatsApp('Nike Sneakers','R1,800')">
+      Order on Whatsapp
+    </button>
+  </div>
+
+</div>
+      
+      
+            <!-- CARD 1 -->
+<div class="card" data-category="phones" data-name="macbook pro">
+  
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+    <span class="location">Ennerdale</span>
+  </div>
+
+  <div class="info">
+    <h3>
+      MacBook Pro 
+      <span class="verified">✔ Verified</span>
+    </h3>
+
+    <p class="price">R22,000</p>
+
+    <p class="urgency">Only 2 left</p>
+
+    <button onclick="orderWhatsApp('MacBook Pro','R22,000')">
+     Order on Whatsapp
+    </button>
+  </div>
+</div>
+
+      <!-- CARD 2 -->
+
+      <!-- CARD 3 -->
+    
+
+      <!-- CARD 4 -->
+      <div class="card" data-category="phones" data-name="iphone 13">
+  
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+    <span class="location">Ennerdale</span>
+  </div>
+
+  <div class="info">
+    <h3>
+      iPhone 13 
+      <span class="verified">✔ Verified</span>
+    </h3>
+
+    <p class="price">R14,500</p>
+
+    <p class="urgency hot">Hot deal</p>
+
+    <button onclick="orderWhatsApp('iPhone 13','R14,500')">
+      Order on Whatsapp
+    </button>
+  </div>
+
+</div>
+
+      <!-- CARD 5 -->
+      <div class="card" data-category="fashion" data-name="nike sneakers">
+  
+  <div class="img-wrap">
+    <img src="https://images.unsplash.com/photo-1521336575822-6da63fb45455">
+    <span class="location">Ennerdale</span>
+  </div>
+
+  <div class="info">
+    <h3>
+      Nike Sneakers 
+      <span class="verified">✔ Verified</span>
+    </h3>
+
+    <p class="price">R1,800</p>
+
+    <p class="urgency hot">Selling fast</p>
+
+    <button onclick="orderWhatsApp('Nike Sneakers','R1,800')">
+      Order on Whatsapp
+    </button>
+  </div>
+
+</div>
+      
     </div>
   </section>
 
